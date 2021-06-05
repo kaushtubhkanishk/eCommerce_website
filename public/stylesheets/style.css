@@ -47,15 +47,12 @@
     width: 100%;
 }
 
-<<<<<<< HEAD
 .container {
     padding: 16px;
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
 
-=======
->>>>>>> b43d6b6937031ee5e541f982d7a610fba34bd267
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
@@ -63,23 +60,11 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: none;
     background: #f1f1f1;
-<<<<<<< HEAD
 }
 
 input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
-=======
-  }
-  
-input[type=text]:focus, input[type=password]:focus {
-   background-color: #ddd;
-   outline: none;
-}
-
-.container {
-    border: 1px solid #f1f1f1;
->>>>>>> b43d6b6937031ee5e541f982d7a610fba34bd267
 }
 
 .registerbtn {
@@ -100,8 +85,4 @@ input[type=text]:focus, input[type=password]:focus {
 .signin {
     background-color: #f1f1f1;
     text-align: center;
-<<<<<<< HEAD
   }
-=======
-}
->>>>>>> b43d6b6937031ee5e541f982d7a610fba34bd267
