@@ -29,10 +29,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', indexRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.get('/register', registerRouter);
 app.get('/login', loginRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

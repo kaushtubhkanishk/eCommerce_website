@@ -1,12 +1,4 @@
-h1 {
-  margin-top: 0;
-  background-color: #55d6aa;
-  text-align: center;
-}
-/* body {
-    background-color: #55d6aa;
-} */
-nav {
+.nav1 {
     width: 80%;
     margin-top: -20;
     margin-left: 0;
@@ -14,13 +6,13 @@ nav {
     float: right;
 }
 
-nav ul {
+.nav1 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav li {
+.nav1 li {
     display: inline-block;
     margin-left: 70px;
     padding-top: 25px;
@@ -28,11 +20,49 @@ nav li {
     position: relative;
 }
 
-nav a {
+.nav1 a {
     color:#444;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+}
+
+.nav1 a:hover {
+    color: #000;
+}
+
+.nav1 a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #444;
+
+    position: absolute;
+    top:0;
+    width: 0%;
+}
+
+.nav1 a:hover::before {
+    width: 100%;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+
+.container {
+    border: 1px solid #f1f1f1;
 }
 
 .registerbtn {
@@ -53,24 +83,4 @@ nav a {
 .signin {
     background-color: #f1f1f1;
     text-align: center;
-}
-
-nav a:hover {
-    color: #000;
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    width: 100%;
-    background-color: #444;
-
-    position: absolute;
-    top:0;
-    width: 0%;
-}
-
-nav a:hover::before {
-    width: 100%;
 }
