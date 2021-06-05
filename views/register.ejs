@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <%- include('./partials/head'); %>
+    <title>register</title>
+  </head>
+  <body>
+    <!--Navigation bar-->
+    <%- include('./partials/navbar'); %>
+    <form action="" id="login-form">
+      <div class="container">
+        <input type="text" name="" id="username" placeholder="Username" />
+        <input type="text" name="" id="email" placeholder="Email" />
+        <input type="password" name="" id="password" placeholder="Password" />
+        <input
+          type="password"
+          name=""
+          id="Re-enter password"
+          placeholder="Re-enter password"
+        />
+        <input type="submit" class="registerbtn" value="Register" />
+      </div>
+      <div class="container signin">
+        <p>Already have an account? <a href="login">Sign in</a>.</p>
+      </div>
+    </form>
+    <script>
+      const form = document.getElementById("reg-form");
+      form.addEventListener("submit", registerUser);
+      async function registerUser(event) {
+        event.preventDefault();
+        const Email = document.getElementById("email").value;
+        const Username = document.getElementById("username").value;
+        const Password = document.getElementById("password").value;
+        const result = await fetch("/auth/register", {
+          method: "Post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            Username,
+            Password,
+            Email
+          }),
+        }).then((res) => res.json());
+
+        if (result.status === "ok"){
+          alert("Your user has been created")
+        } else {
+          alert(result.error);
+        }
+      }
+    </script>
+  </body>
+  <%- include('./partials/script'); %>
+</html>

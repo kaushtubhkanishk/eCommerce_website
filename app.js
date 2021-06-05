@@ -8,6 +8,9 @@ var product =require('./model/product');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var mongoose = require('mongoose');
+var registerRouter = require('./routes/register');
+var loginRouter = require('./routes/login');
+
 var app = express();
 //mongoose setup
 mongoose.connect('mongodb://localhost:27017/'+process.env.DATABASENAME ,{
@@ -27,8 +30,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.get('/', indexRouter);
 app.use('/users', usersRouter);
+app.get('/register', registerRouter);
+app.get('/login', loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
