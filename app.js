@@ -36,11 +36,6 @@ app.get('/', indexRouter);
 app.use('/users', usersRouter);
 app.get('/register', registerRouter);
 app.get('/login', loginRouter);
-<<<<<<< HEAD
-=======
-
->>>>>>> b43d6b6937031ee5e541f982d7a610fba34bd267
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
