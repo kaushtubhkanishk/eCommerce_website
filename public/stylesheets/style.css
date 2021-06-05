@@ -3,10 +3,10 @@ h1 {
   background-color: #55d6aa;
   text-align: center;
 }
-#background {
+/* body {
     background-color: #55d6aa;
-}
-#nav-placeholder {
+} */
+nav {
     width: 80%;
     margin-top: -20;
     margin-left: 0;
@@ -14,13 +14,13 @@ h1 {
     float: right;
 }
 
-#nav-placeholder nav ul {
+nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-#nav-placeholder nav li {
+nav li {
     display: inline-block;
     margin-left: 70px;
     padding-top: 25px;
@@ -28,18 +28,18 @@ h1 {
     position: relative;
 }
 
-#nav-placeholder nav a {
+nav a {
     color:#444;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-#nav-placeholder nav a:hover {
+nav a:hover {
     color: #000;
 }
 
-#nav-placeholder nav a::before {
+nav a::before {
     content: '';
     display: block;
     height: 5px;
@@ -51,6 +51,6 @@ h1 {
     width: 0%;
 }
 
-#nav-placeholder nav a:hover::before {
+nav a:hover::before {
     width: 100%;
 }
