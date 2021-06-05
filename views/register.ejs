@@ -55,3 +55,28 @@
   </body>
   <%- include('./partials/script'); %>
 </html>
+<!DOCTYPE html>
+
+<html lang = "en">
+  <head>
+    <%- include('./partials/head'); %>
+      
+  </head>
+  <body>
+    <!--Navigation bar-->
+    <%- include('./partials/navbar'); %>
+    <form action="" id="login-form">
+      <div class ="container">
+        <input type="text" name="" id = "username" placeholder="Username" />
+        <input type="text" name="" id = "email" placeholder="Email" />
+        <input type="password" name="" id="password" placeholder="Password" />
+        <input type="password" name="" id = "Re-enter password" placeholder="Re-enter password" />
+        <input type="submit" class ="registerbtn" value="Register">
+      </div>
+      <div class="signin">
+        <p>Already have an account? <a href="login">Sign in</a>.</p>
+      </div>
+    </form>
+  </body>
+  <%- include('./partials/script'); %>
+</html>

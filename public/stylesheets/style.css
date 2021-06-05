@@ -1,12 +1,4 @@
-h1 {
-  margin-top: 0;
-  background-color: #55d6aa;
-  text-align: center;
-}
-/* body {
-    background-color: #55d6aa;
-} */
-nav {
+.nav1 {
     width: 80%;
     margin-top: -20;
     margin-left: 0;
@@ -14,13 +6,13 @@ nav {
     float: right;
 }
 
-nav ul {
+.nav1 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav li {
+.nav1 li {
     display: inline-block;
     margin-left: 70px;
     padding-top: 25px;
@@ -28,18 +20,18 @@ nav li {
     position: relative;
 }
 
-nav a {
+.nav1 a {
     color:#444;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-nav a:hover {
+.nav1 a:hover {
     color: #000;
 }
 
-nav a::before {
+.nav1 a::before {
     content: '';
     display: block;
     height: 5px;
@@ -51,16 +43,19 @@ nav a::before {
     width: 0%;
 }
 
-nav a:hover::before {
+.nav1 a:hover::before {
     width: 100%;
 }
 
+<<<<<<< HEAD
 .container {
     padding: 16px;
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
 
+=======
+>>>>>>> b43d6b6937031ee5e541f982d7a610fba34bd267
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
@@ -68,11 +63,23 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: none;
     background: #f1f1f1;
+<<<<<<< HEAD
 }
 
 input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
+=======
+  }
+  
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+
+.container {
+    border: 1px solid #f1f1f1;
+>>>>>>> b43d6b6937031ee5e541f982d7a610fba34bd267
 }
 
 .registerbtn {
@@ -93,4 +100,8 @@ input[type=text]:focus, input[type=password]:focus {
 .signin {
     background-color: #f1f1f1;
     text-align: center;
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> b43d6b6937031ee5e541f982d7a610fba34bd267
