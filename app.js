@@ -1,8 +1,10 @@
 var createError = require('http-errors');
 var express = require('express');
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var bodyParser  = require('body-parser');
 var User = require('./model/users')
 var product =require('./model/product');
 var indexRouter = require('./routes/index');
@@ -25,7 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
-
+app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -36,6 +38,8 @@ app.get('/', indexRouter);
 app.use('/users', usersRouter);
 app.get('/register', registerRouter);
 app.get('/login', loginRouter);
+app.use('/api/register/',registerRouter);
+app.use('/api/login',loginRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

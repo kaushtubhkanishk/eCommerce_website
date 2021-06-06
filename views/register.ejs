@@ -8,7 +8,7 @@
   <body>
     <!--Navigation bar-->
     <%- include('./partials/navbar'); %>
-    <form action="" id="login-form">
+    <form action="" id="reg-form">
       <div class="container">
         <input type="text" name="" id="username" placeholder="Username" />
         <input type="text" name="" id="email" placeholder="Email" />
@@ -26,27 +26,27 @@
       </div>
     </form>
     <script>
-      const form = document.getElementById("reg-form");
-      form.addEventListener("submit", registerUser);
+      const form = document.getElementById('reg-form');
+      form.addEventListener('submit', registerUser);
       async function registerUser(event) {
         event.preventDefault();
         const Email = document.getElementById("email").value;
         const Username = document.getElementById("username").value;
         const Password = document.getElementById("password").value;
-        const result = await fetch("/auth/register", {
+        const result = await fetch("/api/register", {
           method: "Post",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            Email,
             Username,
             Password,
-            Email
           }),
         }).then((res) => res.json());
 
-        if (result.status === "ok"){
-          alert("Your user has been created")
+        if (result.status === "ok") {
+          alert("Your user has been created");
         } else {
           alert(result.error);
         }
